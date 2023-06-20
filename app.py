@@ -76,6 +76,8 @@ os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggin
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/dark-sushi-25d/resolve/main/darkSushi25D25D_v20.safetensors -d /home/demo/source/stable-diffusion-webui/models/Stable-diffusion -o darkSushi25D25D_v20.safetensors")
 os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /home/demo/source/stable-diffusion-webui/models/Stable-diffusion -o darkSushi25D25D_v20.vae.pt")
 
+os.system(f"aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/wavymulder/modelshoot/blob/main/modelshoot-1.0.safetensors -d /home/demo/source/stable-diffusion-webui/models/Stable-diffusion -o modelshoot-1.0.safetensors")
+
 # os.system(f"sed -i -e 's/\"sd_model_checkpoint\"\,/\"sd_model_checkpoint\,sd_vae\,CLIP_stop_at_last_layers\"\,/g' /home/demo/source/stable-diffusion-webui/modules/shared.py")
 
 os.system(f"python launch.py --port 8266 --listen --cors-allow-origins=* --xformers --enable-insecure-extension-access --theme dark --gradio-queue --disable-safe-unpickle --api --api-log")
